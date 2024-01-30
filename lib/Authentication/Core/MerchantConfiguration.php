@@ -15,6 +15,8 @@ class MerchantConfiguration
     private static $defaultMerchantConfiguration;
     private static $logger = null;
 
+    protected string $tempFolderPath;
+
     /**
      * authenticationType for OAuth
      *

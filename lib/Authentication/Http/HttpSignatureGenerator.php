@@ -75,7 +75,8 @@ class HttpSignatureGenerator implements TokenGenerator
     }
     //Purpose: using for access and return the signature token
     protected function accessTokenHeader($signatureString, $headerString, $merchantConfig){
-        $signatureByteString = utf8_encode($signatureString);
+//        $signatureByteString = utf8_encode($signatureString);
+        $signatureByteString = mb_convert_encoding($signatureString, 'UTF-8', 'ISO-8859-1');
         $decodeKey = base64_decode($merchantConfig->getSecretKey());
         $signature = base64_encode(hash_hmac(GlobalParameter::SHA256, $signatureByteString, $decodeKey, true));
         $signatureHeader = array(

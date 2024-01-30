@@ -55,6 +55,7 @@ class ApiClient
     public static $PUT = "PUT";
     public static $DELETE = "DELETE";
 
+    public $merchantConfig = null;
     /**
      * Client ID
      *
@@ -237,7 +238,8 @@ class ApiClient
         } elseif ((is_object($postData) or is_array($postData)) and !in_array('Content-Type: multipart/form-data', $headers, true)) { // json model
             $postData = json_encode(\CyberSource\ObjectSerializer::sanitizeForSerialization($postData));
         }
-        $resourcePath= utf8_encode($resourcePath);
+//        $resourcePath = utf8_encode($resourcePath);
+        $resourcePath = mb_convert_encoding($resourcePath, 'UTF-8', 'ISO-8859-1');
 
         if($this->merchantConfig->getAuthenticationType() != GlobalParameter::MUTUAL_AUTH)
         {
