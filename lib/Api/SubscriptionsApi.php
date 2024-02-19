@@ -383,7 +383,9 @@ class SubscriptionsApi
         }
         
         $sdkTracker = new \CyberSource\Utilities\Tracking\SdkTracker();
-        $_tempBody = $sdkTracker->insertDeveloperIdTracker($_tempBody, end(explode('\\', '\CyberSource\Model\CreateSubscriptionRequest')), $this->apiClient->merchantConfig->getRunEnvironment());
+        $part = explode('\\', '\CyberSource\Model\CreateSubscriptionRequest');
+        $endPart = end($part);
+        $_tempBody = $sdkTracker->insertDeveloperIdTracker($_tempBody, $endPart, $this->apiClient->merchantConfig->getRunEnvironment());
 
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -971,7 +973,9 @@ class SubscriptionsApi
         }
         
         $sdkTracker = new \CyberSource\Utilities\Tracking\SdkTracker();
-        $_tempBody = $sdkTracker->insertDeveloperIdTracker($_tempBody, end(explode('\\', '\CyberSource\Model\UpdateSubscription')), $this->apiClient->merchantConfig->getRunEnvironment());
+        $part = explode('\\', '\CyberSource\Model\UpdateSubscription');
+        $endPart = end($part);
+        $_tempBody = $sdkTracker->insertDeveloperIdTracker($_tempBody, $endPart, $this->apiClient->merchantConfig->getRunEnvironment());
 
         // for model (json/xml)
         if (isset($_tempBody)) {

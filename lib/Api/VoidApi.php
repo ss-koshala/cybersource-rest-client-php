@@ -147,7 +147,9 @@ class VoidApi
         }
         
         $sdkTracker = new \CyberSource\Utilities\Tracking\SdkTracker();
-        $_tempBody = $sdkTracker->insertDeveloperIdTracker($_tempBody, end(explode('\\', '\CyberSource\Model\MitVoidRequest')), $this->apiClient->merchantConfig->getRunEnvironment());
+        $part = explode('\\', '\CyberSource\Model\MitVoidRequest');
+        $endPart = end($part);
+        $_tempBody = $sdkTracker->insertDeveloperIdTracker($_tempBody, $endPart, $this->apiClient->merchantConfig->getRunEnvironment());
 
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -273,7 +275,9 @@ class VoidApi
         }
         
         $sdkTracker = new \CyberSource\Utilities\Tracking\SdkTracker();
-        $_tempBody = $sdkTracker->insertDeveloperIdTracker($_tempBody, end(explode('\\', '\CyberSource\Model\VoidCaptureRequest')), $this->apiClient->merchantConfig->getRunEnvironment());
+        $part = explode('\\', '\CyberSource\Model\VoidCaptureRequest');
+        $endPart = end($part);
+        $_tempBody = $sdkTracker->insertDeveloperIdTracker($_tempBody, $endPart, $this->apiClient->merchantConfig->getRunEnvironment());
 
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -399,7 +403,9 @@ class VoidApi
         }
         
         $sdkTracker = new \CyberSource\Utilities\Tracking\SdkTracker();
-        $_tempBody = $sdkTracker->insertDeveloperIdTracker($_tempBody, end(explode('\\', '\CyberSource\Model\VoidCreditRequest')), $this->apiClient->merchantConfig->getRunEnvironment());
+        $part = explode('\\', '\CyberSource\Model\VoidCreditRequest');
+        $endPart = end($part);
+        $_tempBody = $sdkTracker->insertDeveloperIdTracker($_tempBody, $endPart, $this->apiClient->merchantConfig->getRunEnvironment());
 
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -525,7 +531,9 @@ class VoidApi
         }
         
         $sdkTracker = new \CyberSource\Utilities\Tracking\SdkTracker();
-        $_tempBody = $sdkTracker->insertDeveloperIdTracker($_tempBody, end(explode('\\', '\CyberSource\Model\VoidPaymentRequest')), $this->apiClient->merchantConfig->getRunEnvironment());
+        $part = explode('\\', '\CyberSource\Model\VoidPaymentRequest');
+        $endPart = end($part);
+        $_tempBody = $sdkTracker->insertDeveloperIdTracker($_tempBody, $endPart, $this->apiClient->merchantConfig->getRunEnvironment());
 
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -651,7 +659,9 @@ class VoidApi
         }
         
         $sdkTracker = new \CyberSource\Utilities\Tracking\SdkTracker();
-        $_tempBody = $sdkTracker->insertDeveloperIdTracker($_tempBody, end(explode('\\', '\CyberSource\Model\VoidRefundRequest')), $this->apiClient->merchantConfig->getRunEnvironment());
+        $part = explode('\\', '\CyberSource\Model\VoidRefundRequest');
+        $endPart = end($part);
+        $_tempBody = $sdkTracker->insertDeveloperIdTracker($_tempBody, $endPart, $this->apiClient->merchantConfig->getRunEnvironment());
 
         // for model (json/xml)
         if (isset($_tempBody)) {

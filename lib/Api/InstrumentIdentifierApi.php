@@ -603,7 +603,9 @@ class InstrumentIdentifierApi
         }
         
         $sdkTracker = new \CyberSource\Utilities\Tracking\SdkTracker();
-        $_tempBody = $sdkTracker->insertDeveloperIdTracker($_tempBody, end(explode('\\', '\CyberSource\Model\PatchInstrumentIdentifierRequest')), $this->apiClient->merchantConfig->getRunEnvironment());
+        $part = explode('\\', '\CyberSource\Model\PatchInstrumentIdentifierRequest');
+        $endPart = end($part);
+        $_tempBody = $sdkTracker->insertDeveloperIdTracker($_tempBody, $endPart, $this->apiClient->merchantConfig->getRunEnvironment());
 
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -741,7 +743,9 @@ class InstrumentIdentifierApi
         }
         
         $sdkTracker = new \CyberSource\Utilities\Tracking\SdkTracker();
-        $_tempBody = $sdkTracker->insertDeveloperIdTracker($_tempBody, end(explode('\\', '\CyberSource\Model\PostInstrumentIdentifierRequest')), $this->apiClient->merchantConfig->getRunEnvironment());
+        $part = explode('\\', '\CyberSource\Model\PostInstrumentIdentifierRequest');
+        $endPart = end($part);
+        $_tempBody = $sdkTracker->insertDeveloperIdTracker($_tempBody, $endPart, $this->apiClient->merchantConfig->getRunEnvironment());
 
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -891,7 +895,9 @@ class InstrumentIdentifierApi
         }
         
         $sdkTracker = new \CyberSource\Utilities\Tracking\SdkTracker();
-        $_tempBody = $sdkTracker->insertDeveloperIdTracker($_tempBody, end(explode('\\', '\CyberSource\Model\PostInstrumentIdentifierEnrollmentRequest')), $this->apiClient->merchantConfig->getRunEnvironment());
+        $part = explode('\\', '\CyberSource\Model\PostInstrumentIdentifierEnrollmentRequest');
+        $endPart = end($part);
+        $_tempBody = $sdkTracker->insertDeveloperIdTracker($_tempBody, $endPart, $this->apiClient->merchantConfig->getRunEnvironment());
 
         // for model (json/xml)
         if (isset($_tempBody)) {
